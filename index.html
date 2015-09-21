@@ -1,23 +1,29 @@
 ---
-layout: default
+layout: base
+title: "stroem"
 ---
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
+  <h1 id="introduction">What is Stroem</h1>
+  <p>Stroem is a protocol for fast micro payments.</p>
+  <h1 id="documentation">Documentation</h1>
+  <ul>
+    <li>Read the <a href="https://www.strawpay.com/docs/stroem-payment-system.pdf">white paper</a></li>
+    <!--li>Read the <a href="/stroem-specification">specification</li-->
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <h1 id="community">Code</h1>
+  <b>Note the code is not yet released</b><br/>
+  Stroem is written in Scala.<br/>
+  <table>
+    <tr>
+      <td><a href="https://github.com/stroem-io/stroem-core">stroem-core</a></td>
+      <td>The core, all the messagaes and basic cryptography.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/stroem-io/stroem-consumer">stroem-consumer.</a></td>
+      <td>A helper library for the consumer role.</td>
+    </tr>
+  </ul>
 
 </div>
